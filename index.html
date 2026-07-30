@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>شركة المهندس للصيانة و المقاولات العامة</title>
+<meta name="description" content="شركة المهندس للمقاولات العامة، التيار الخفيف، اعمال الالكتروميكانيك و التبريد و التكييف - العاشر من رمضان" />
+<link rel="icon" href="images/logo/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand">
+      <img src="images/logo/logo.svg" alt="شعار شركة المهندس" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-name">شركة المهندس</span>
+        <span class="brand-sub">للصيانة و المقاولات العامة</span>
+      </div>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#top">الرئيسية</a>
+      <a href="#about">من نحن</a>
+      <a href="#sectors">قطاعاتنا</a>
+      <a href="#contact">اتصل بنا</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <h1>شركة المهندس <span>للصيانة و المقاولات العامة</span></h1>
+    <p class="hero-desc">
+      شركة المهندس للمقاولات العامة، التيار الخفيف، اعمال الالكتروميكانيك و التبريد و التكييف.
+    </p>
+    <p class="hero-location">📍 العاشر من رمضان - مج ١٩</p>
+    <div class="hero-actions">
+      <a href="#sectors" class="btn btn-primary">تعرف على قطاعاتنا</a>
+      <a href="#contact" class="btn btn-outline">اتصل بنا</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <h2 class="section-title">من نحن</h2>
+    <p class="about-text">
+      شركة المهندس للصيانة و المقاولات العامة، شركة متخصصة في تنفيذ أعمال المقاولات العامة،
+      أعمال التيار الخفيف، الالكتروميكانيك، وأعمال التبريد و التكييف، بخبرة فريق عمل متكامل
+      يضمن جودة التنفيذ والالتزام بالمواعيد لكافة مشاريعنا.
+    </p>
+  </div>
+</section>
+
+<section class="sectors" id="sectors">
+  <div class="container">
+    <h2 class="section-title">قطاعاتنا</h2>
+    <p class="section-sub">اختر أحد القطاعات لعرض مشاريعنا الخاصة به</p>
+
+    <div class="sector-tabs" id="sectorTabs" role="tablist"></div>
+    <div class="sector-panels" id="sectorPanels"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-inner">
+    <h2 class="section-title">اتصل بنا</h2>
+
+    <div class="contact-grid">
+      <a class="contact-card" href="tel:01200611949">
+        <span class="contact-icon">📞</span>
+        <span class="contact-label">اتصال مباشر</span>
+        <span class="contact-value">01200611949</span>
+      </a>
+      <a class="contact-card" href="tel:01200611641">
+        <span class="contact-icon">📞</span>
+        <span class="contact-label">اتصال مباشر</span>
+        <span class="contact-value">01200611641</span>
+      </a>
+      <a class="contact-card" href="https://wa.me/201200611949" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        <span class="contact-label">واتساب</span>
+        <span class="contact-value">01200611949</span>
+      </a>
+      <a class="contact-card" href="https://wa.me/201200611641" target="_blank" rel="noopener">
+        <span class="contact-icon">💬</span>
+        <span class="contact-label">واتساب</span>
+        <span class="contact-value">01200611641</span>
+      </a>
+      <div class="contact-card contact-address">
+        <span class="contact-icon">📍</span>
+        <span class="contact-label">العنوان</span>
+        <span class="contact-value">العاشر من رمضان - مج ١٩</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> شركة المهندس للصيانة و المقاولات العامة - جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,2 +1,45 @@
-# MyFirstRepo
-This is my first Repo ever and it would not be the last INSHALLAH, 2026 is going to be my Year.
+# موقع شركة المهندس للصيانة و المقاولات العامة
+
+موقع ثابت (Static Website) بسيط بدون أي متطلبات خادم (server) - يعمل مباشرة عبر GitHub Pages
+أو بفتح ملف `index.html` في المتصفح.
+
+## هيكل الملفات
+
+```
+index.html          الصفحة الرئيسية (الهيدر، القطاعات، التواصل)
+css/style.css        التنسيقات
+js/data.js           بيانات القطاعات والمشاريع (هنا تضيف مشاريعك)
+js/main.js           كود بناء الصفحات من البيانات
+images/logo/          الشعار
+images/projects/      صور المشاريع
+```
+
+## كيفية إضافة مشروع جديد
+
+افتح ملف `js/data.js` وأضف كائن جديد داخل مصفوفة `projects` للقطاع المطلوب:
+
+```js
+{ name: "اسم المشروع", description: "وصف مختصر", image: "images/projects/my-project.jpg", link: "https://..." }
+```
+
+- إذا لم تكن الصورة جاهزة بعد: اترك `image: ""` وسيظهر مكانها "الصورة قيد الإضافة".
+- إذا لم يكن الرابط جاهزاً بعد: اترك `link: ""` وسيظهر "الرابط قيد الإضافة قريباً".
+- لإضافة الصورة: ضعها داخل `images/projects/` ثم اكتب اسم الملف في `image`.
+
+## كيفية إضافة قطاع جديد
+
+أضف كائناً جديداً داخل مصفوفة `sectorsData` في `js/data.js` بنفس تنسيق القطاعات الموجودة.
+
+## معاينة الموقع محلياً
+
+يكفي فتح `index.html` مباشرة في المتصفح، أو تشغيل خادم بسيط:
+
+```
+python3 -m http.server 8000
+```
+
+ثم فتح `http://localhost:8000`.
+
+## النشر عبر GitHub Pages
+
+من إعدادات المستودع (Settings) > Pages، اختر الفرع (branch) والمجلد الجذري `/ (root)`.
