@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>لوحة التحكم - شركة المهندس</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="icon" href="../images/logo/favicon.svg" type="image/svg+xml" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="../css/admin.css" />
+</head>
+<body class="admin-body">
+
+<div id="loginScreen" class="admin-login">
+  <form id="loginForm" class="admin-login-card">
+    <img src="../images/logo/logo.svg" alt="شعار الشركة" class="admin-logo" />
+    <h2>لوحة تحكم المشاريع</h2>
+    <label>اسم المستخدم
+      <input type="text" name="username" required autocomplete="username" />
+    </label>
+    <label>كلمة المرور
+      <input type="password" name="password" required autocomplete="current-password" />
+    </label>
+    <button type="submit" class="btn btn-primary admin-btn">تسجيل الدخول</button>
+    <p id="loginError" class="admin-error"></p>
+  </form>
+</div>
+
+<div id="dashboard" class="admin-dashboard hidden">
+  <header class="admin-header">
+    <div class="container admin-header-inner">
+      <div class="brand">
+        <img src="../images/logo/logo.svg" alt="شعار الشركة" class="brand-logo" />
+        <span class="brand-name">لوحة تحكم المشاريع</span>
+      </div>
+      <div class="admin-header-actions">
+        <a href="../index.html" target="_blank" class="btn btn-outline-dark">عرض الموقع</a>
+        <button id="logoutBtn" class="btn btn-outline-dark">تسجيل الخروج</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container admin-main">
+    <section class="admin-form-card">
+      <h3 id="formTitle">إضافة مشروع جديد</h3>
+      <form id="projectForm" enctype="multipart/form-data">
+        <input type="hidden" name="projectId" />
+
+        <label>القطاع
+          <select name="sectorId" id="sectorSelect" required></select>
+        </label>
+
+        <label>اسم المشروع
+          <input type="text" name="name" required />
+        </label>
+
+        <label>وصف المشروع
+          <textarea name="description" rows="3"></textarea>
+        </label>
+
+        <label>رابط تفاصيل المشروع (اختياري)
+          <input type="url" name="link" placeholder="https://..." />
+        </label>
+
+        <label>صورة المشروع (اختياري)
+          <input type="file" name="image" accept="image/*" />
+        </label>
+
+        <div class="admin-form-actions">
+          <button type="submit" class="btn btn-primary admin-btn">حفظ</button>
+          <button type="button" id="cancelEditBtn" class="btn btn-outline-dark hidden">إلغاء التعديل</button>
+        </div>
+        <p id="formMessage" class="admin-message"></p>
+      </form>
+    </section>
+
+    <section id="projectsList" class="admin-projects-list"></section>
+  </main>
+</div>
+
+<script src="../js/admin.js"></script>
+</body>
+</html>
